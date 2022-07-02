@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Timetable Management System</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home1_ttl">See Your Schedules</string>
+    <string name="home2_ttl">Get Your Faculty Details</string>
+    <string name="home3_ttl">Get Your Syllabus</string>
+    <string name="logorsign_ttl">Hey Come in..!</string>
+    <string name="signUp">Sign In as Student</string>
+    <string name="signIn">Sign In as Faculty</string>
+    <string name="signInAdmin">Sign In as Admin</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry</string>
+</resources>
