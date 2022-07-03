@@ -8,6 +8,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.example.timetablemanagementsystem.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -18,6 +20,7 @@ public class AdminHome extends AppCompatActivity {
 
    StudentReg studentReg = new StudentReg();
    FacultyRegister facultyRegister = new FacultyRegister();
+   TextView greetAdmin;
 
 
     @Override
@@ -45,12 +48,28 @@ public class AdminHome extends AppCompatActivity {
             }
         });
 
+        greetAdmin = findViewById(R.id.greetAdmin);
+
+        String adminName = getIntent().getStringExtra("name");
+        String adminEmail = getIntent().getStringExtra("email");
+
+        greetAdmin.setText("Hii "+adminName);
+
     }
     private void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager=getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.adminHomeFrame,fragment);
         fragmentTransaction.commit() ;
+    }
+
+    public void AdminHome(View v){
+        greetAdmin = findViewById(R.id.greetAdmin);
+
+        String adminName = getIntent().getStringExtra("name");
+        String adminEmail = getIntent().getStringExtra("email");
+
+        greetAdmin.setText("Hii "+adminName);
     }
 
 }
