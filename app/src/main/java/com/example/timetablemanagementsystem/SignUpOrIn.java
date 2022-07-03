@@ -42,7 +42,7 @@ public class SignUpOrIn extends AppCompatActivity {
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i =new Intent(SignUpOrIn.this,RegisterStudent.class);
+                Intent i =new Intent(SignUpOrIn.this,AdminLogin.class);
                 startActivity(i);
             }
         });

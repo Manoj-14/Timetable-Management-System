@@ -20,7 +20,7 @@ public class StudentLogin extends AppCompatActivity {
 
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
-    private String BASE_URL = "http://10.0.2.2:9000";
+    private String BASE_URL = "http://10.0.2.2:9001";
     Button login;
     EditText usnEdit,passwordEdit;
     @Override
@@ -41,7 +41,6 @@ public class StudentLogin extends AppCompatActivity {
                 HashMap<String,String> map = new HashMap<>();
                 map.put("usn",usnEdit.getText().toString());
                 map.put("password",passwordEdit.getText().toString());
-
                 Call<LoginRes> call = retrofitInterface.executeLogin(map);
                 call.enqueue(new Callback<LoginRes>() {
                     @Override

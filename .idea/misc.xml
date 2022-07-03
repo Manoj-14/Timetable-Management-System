@@ -6,7 +6,7 @@
         <entry key="..\:/Users/hp/AndroidStudioProjects/TimetableManagementSystem/app/src/main/res/drawable/ic_baseline_keyboard_arrow_right_24.xml" value="0.191" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/TimetableManagementSystem/app/src/main/res/drawable/ic_baseline_list_alt_24.xml" value="0.191" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/TimetableManagementSystem/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.148" />
-        <entry key="..\:/Users/hp/AndroidStudioProjects/TimetableManagementSystem/app/src/main/res/layout/activity_admin_home.xml" value="0.184375" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/TimetableManagementSystem/app/src/main/res/layout/activity_admin_home.xml" value="0.5" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/TimetableManagementSystem/app/src/main/res/layout/activity_admin_login.xml" value="0.1" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/TimetableManagementSystem/app/src/main/res/layout/activity_faculty_login.xml" value="0.1" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/TimetableManagementSystem/app/src/main/res/layout/activity_home_screen.xml" value="0.1" />
@@ -18,9 +18,10 @@
         <entry key="..\:/Users/hp/AndroidStudioProjects/TimetableManagementSystem/app/src/main/res/layout/activity_student_login.xml" value="0.2" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/TimetableManagementSystem/app/src/main/res/layout/fragment_fac_login.xml" value="0.1" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/TimetableManagementSystem/app/src/main/res/layout/fragment_faculty.xml" value="0.1" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/TimetableManagementSystem/app/src/main/res/layout/fragment_faculty_register.xml" value="0.125" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/TimetableManagementSystem/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/TimetableManagementSystem/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
-        <entry key="..\:/Users/hp/AndroidStudioProjects/TimetableManagementSystem/app/src/main/res/layout/fragment_student_reg.xml" value="0.125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/TimetableManagementSystem/app/src/main/res/layout/fragment_student_reg.xml" value="0.1" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/TimetableManagementSystem/app/src/main/res/layout/fragment_stulogin.xml" value="0.1" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/TimetableManagementSystem/app/src/main/res/layout/fragment_syllabus.xml" value="0.1" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/TimetableManagementSystem/app/src/main/res/layout/loginorsignup.xml" value="0.1" />
