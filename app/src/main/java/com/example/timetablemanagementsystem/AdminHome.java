@@ -20,6 +20,7 @@ public class AdminHome extends AppCompatActivity {
 
    StudentReg studentReg = new StudentReg();
    FacultyRegister facultyRegister = new FacultyRegister();
+   AdminProfileFragment adminProfileFragment = new AdminProfileFragment();
    TextView greetAdmin;
 
 
@@ -42,6 +43,8 @@ public class AdminHome extends AppCompatActivity {
                     case R.id.adminFacframe:
                         replaceFragment(facultyRegister);
                         break;
+                    case R.id.adminProfframe:
+                        replaceFragment(adminProfileFragment);
                 }
 
                 return true;

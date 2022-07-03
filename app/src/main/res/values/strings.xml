@@ -10,6 +10,11 @@
     <string name="signIn">Sign In as Faculty</string>
     <string name="signInAdmin">Sign In as Admin</string>
     <string name="next">Next</string>
+    <string name="name">Name :</string>
+    <string name="email">Email :</string>
+    <string name="usn">USN :</string>
+    <string name="facId">Faculty Id :</string>
     <string name="skip">Skip</string>
+    <string name="UptPass">Update Password</string>
     <string name="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry</string>
 </resources>
