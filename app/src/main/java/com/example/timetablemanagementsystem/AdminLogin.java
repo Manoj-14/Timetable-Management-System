@@ -44,7 +44,8 @@ public class AdminLogin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-//
+//              
+//                Toast.makeText(AdminLogin.this, "Clicked", Toast.LENGTH_SHORT).show();
                 HashMap<String,String> map = new HashMap<>();
                 map.put("email",adminEmail.getText().toString());
                 map.put("password",adminPass.getText().toString());
@@ -71,7 +72,7 @@ public class AdminLogin extends AppCompatActivity {
 
                     @Override
                     public void onFailure(Call<AdminRes> call, Throwable t) {
-                        Toast.makeText(AdminLogin.this, "Enter the Correct details", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AdminLogin.this, t.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
             }

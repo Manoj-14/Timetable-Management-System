@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/facAddCls"
+        android:icon="@android:drawable/ic_input_add"
+        android:title="Add Class" />
+    <item
+        android:id="@+id/facTtl"
+        android:icon="@drawable/ic_baseline_table_chart_24"
+        android:title="Timetable" />
+    <item
+        android:id="@+id/facAddSyls"
+        android:icon="@drawable/ic_baseline_list_alt_24"
+        android:title="Add Syllabus" />
+    <item
+        android:id="@+id/facProf"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Profile" />
+</menu>

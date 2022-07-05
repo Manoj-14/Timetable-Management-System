@@ -71,7 +71,7 @@ public class StudentReg extends Fragment {
                 Call<Void> call = retrofitInterface.executeSignup(map);
 
                 call.enqueue(new Callback<Void>() {
-                    @Override
+                    @Override   
                     public void onResponse(Call<Void> call, Response<Void> response) {
                         if(response.code() == 200){
                             Toast.makeText(activityObj, "Registration Successfull", Toast.LENGTH_SHORT).show();
