@@ -24,55 +24,54 @@ public class AdminHome extends AppCompatActivity {
    TextView greetAdmin;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_home);
 
         bottomNavigationView = findViewById(R.id.adminBottomNavigationView);
+        greetAdmin = findViewById(R.id.greetAdmin);
 
-//        getSupportFragmentManager().beginTransaction().replace(R.id.adminHomeFrame,studentReg);
-        replaceFragment(studentReg);
+        String adminName = getIntent().getStringExtra("name");
+        String adminEmail = getIntent().getStringExtra("email");
+
+        greetAdmin.setText("Hii "+adminName);
+
+        Bundle bundle = new Bundle();
+        bundle.putString("name",adminName);
+        bundle.putString("email",adminEmail);
+        replaceFragment(studentReg,bundle);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.adminStuFrame:
-                        replaceFragment(studentReg);
+                        replaceFragment(studentReg,bundle);
                         break;
                     case R.id.adminFacframe:
-                        replaceFragment(facultyRegister);
+                        replaceFragment(facultyRegister,bundle);
                         break;
                     case R.id.adminProfframe:
-                        replaceFragment(adminProfileFragment);
+                        replaceFragment(adminProfileFragment,bundle);
                 }
 
                 return true;
             }
         });
 
-        greetAdmin = findViewById(R.id.greetAdmin);
 
-        String adminName = getIntent().getStringExtra("name");
-        String adminEmail = getIntent().getStringExtra("email");
 
-        greetAdmin.setText("Hii "+adminName);
 
     }
-    private void replaceFragment(Fragment fragment){
+    private void replaceFragment(Fragment fragment,Bundle bundle){
         FragmentManager fragmentManager=getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.adminHomeFrame,fragment);
+        fragment.setArguments(bundle);
         fragmentTransaction.commit() ;
     }
 
-    public void AdminHome(View v){
-        greetAdmin = findViewById(R.id.greetAdmin);
 
-        String adminName = getIntent().getStringExtra("name");
-        String adminEmail = getIntent().getStringExtra("email");
-
-        greetAdmin.setText("Hii "+adminName);
-    }
 
 }

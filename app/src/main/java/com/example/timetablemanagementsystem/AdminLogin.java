@@ -57,10 +57,11 @@ public class AdminLogin extends AppCompatActivity {
                         if(response.code() == 200){
                             AdminRes result = response.body();
 
-                            Toast.makeText(AdminLogin.this, result.getName(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AdminLogin.this, result.getEmail(), Toast.LENGTH_SHORT).show();
                             Intent adHmintent = new Intent(AdminLogin.this,AdminHome.class);
                             adHmintent.putExtra("name",result.getName());
                             adHmintent.putExtra("email",result.getEmail());
+
                             startActivity(adHmintent);
                         }
                         else if(response.code() == 400){

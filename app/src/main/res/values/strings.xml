@@ -13,6 +13,8 @@
     <string name="name">Name :</string>
     <string name="email">Email :</string>
     <string name="usn">USN :</string>
+    <string name="old_pass">Old Password</string>
+    <string name="new_pass">New Password</string>
     <string name="facId">Faculty Id :</string>
     <string name="skip">Skip</string>
     <string name="UptPass">Update Password</string>

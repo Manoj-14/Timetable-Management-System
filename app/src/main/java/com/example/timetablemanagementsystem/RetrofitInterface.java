@@ -15,4 +15,6 @@ public interface RetrofitInterface {
 
     @POST("/adminLogin")
     Call<AdminRes> exeAdminLogin(@Body HashMap<String,String> map);
+    @POST("/adminPassUpdate")
+    Call<Void> exeAdminUpdate(@Body HashMap<String,String> map);
 }
