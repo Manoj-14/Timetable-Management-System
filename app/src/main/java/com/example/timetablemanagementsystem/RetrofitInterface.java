@@ -27,4 +27,7 @@ public interface RetrofitInterface {
 
     @POST("/facAddCls")
     Call<Void> exefacAddCls(@Body HashMap<String,String> map);
+
+    @POST("/stuPassUpt")
+    Call<Void> exeStuPassUpt(@Body HashMap<String,String> map);
 }

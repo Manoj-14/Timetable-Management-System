@@ -4,9 +4,9 @@
     <item android:title="Home"
         android:id="@+id/home"
         android:icon="@drawable/ic_baseline_home_24"/>
-    <item android:title="Syllabus"
-        android:id="@+id/syllabus"
-        android:icon="@drawable/ic_baseline_table_chart_24"/>
+<!--    <item android:title="Syllabus"-->
+<!--        android:id="@+id/syllabus"-->
+<!--        android:icon="@drawable/ic_baseline_table_chart_24"/>-->
     <item android:id="@+id/faculties"
         android:title="Faculties"
         android:icon="@drawable/ic_baseline_list_alt_24"/>

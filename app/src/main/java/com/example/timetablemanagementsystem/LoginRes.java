@@ -6,13 +6,13 @@ public class LoginRes {
 
     private String usn;
     private String name,branch;
-    private int sem;
+    private String sem;
 
     public String getBranch() {
         return branch;
     }
 
-    public int getSem() {
+    public String getSem() {
         return sem;
     }
 
