@@ -21,4 +21,10 @@ public interface RetrofitInterface {
 
     @POST("/facReg")
     Call<Void> exeFacReg(@Body HashMap<String,String> map);
+
+    @POST("/facLogin")
+    Call<FacLogin> exeFaclogin(@Body HashMap<String,String> map);
+
+    @POST("/facAddCls")
+    Call<Void> exefacAddCls(@Body HashMap<String,String> map);
 }

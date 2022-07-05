@@ -7,18 +7,21 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
+import java.sql.Array;
+import java.util.Arrays;
+
 public class faculty_home_activity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView ;
 
     facViewTtlFragment facViewTtlFragment = new facViewTtlFragment();
-    FacAddSylFragment facAddSylFragment = new FacAddSylFragment();
     FacViewProfFragment facViewProfFragment = new FacViewProfFragment();
     Fac_add_class_fragment fac_add_class_fragment = new Fac_add_class_fragment();
     TextView greetFac;
@@ -29,23 +32,38 @@ public class faculty_home_activity extends AppCompatActivity {
         setContentView(R.layout.activity_faculty_home);
 
         bottomNavigationView = findViewById(R.id.facBottomNavigationView);
-        greetFac = findViewById(R.id.greetFac);
+//        greetFac = findViewById(R.id.greetFac);
+
+
+        String name = getIntent().getStringExtra("name");
+        String fid = getIntent().getStringExtra("fid");
+        String branch = getIntent().getStringExtra("branch");
+        String[] sem = getIntent().getStringArrayExtra("sem");
+
+
+
+
+//        greetFac.setText("Hii " +name);
+
+        Bundle bundle = new Bundle();
+        bundle.putString("name",name);
+        bundle.putString("fid",fid);
+        bundle.putString("branch",branch);
+        bundle.putStringArray("sem",sem);
+        replaceFragment(fac_add_class_fragment,bundle );
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 switch(item.getItemId()){
                     case R.id.facAddCls:
-                        replaceFragment(fac_add_class_fragment);
+                        replaceFragment(fac_add_class_fragment,bundle );
                         break;
                     case R.id.facTtl:
-                        replaceFragment(facViewTtlFragment);
-                        break;
-                    case R.id.facAddSyls:
-                        replaceFragment(facAddSylFragment);
+                        replaceFragment(facViewTtlFragment,bundle );
                         break;
                     case R.id.facProf:
-                        replaceFragment(facViewProfFragment);
+                        replaceFragment(facViewProfFragment,bundle );
                 }
                 return true;
             }
@@ -55,11 +73,11 @@ public class faculty_home_activity extends AppCompatActivity {
 
     }
 
-    private void replaceFragment(Fragment fragment){
+    private void replaceFragment(Fragment fragment,Bundle bundle){
         FragmentManager fragmentManager=getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.facHomeFrame,fragment);
-//        fragment.setArguments(bundle);
+        fragment.setArguments(bundle);
         fragmentTransaction.commit() ;
     }
 

@@ -6,16 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".faculty_home_activity">
 
-    <TextView
-        android:id="@+id/greetFac"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_bold"
-        android:padding="15dp"
-        android:text="Hii Admin"
-        android:textColor="@color/primary"
-        android:textSize="24sp" />
-
     <FrameLayout
         android:id="@+id/facHomeFrame"
         android:layout_width="match_parent"

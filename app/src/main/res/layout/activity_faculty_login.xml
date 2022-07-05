@@ -21,7 +21,7 @@
         android:textSize="34sp" />
 
     <EditText
-        android:id="@+id/facId"
+        android:id="@+id/facIdEdi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -30,7 +30,7 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/facPassword"
+        android:id="@+id/facPasswordEdt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -39,7 +39,7 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/stuLoginBtn"
+        android:id="@+id/facLoginBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
