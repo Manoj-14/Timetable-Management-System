@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 import retrofit2.Call;
@@ -57,6 +59,27 @@ public class StudentLogin extends AppCompatActivity {
                             i.putExtra("usn" ,result.getUsn());
                             i.putExtra("branch",result.getBranch());
                             i.putExtra("sem",result.getSem());
+
+                            i.putExtra("ttlSem", result.getTtlSem());
+                            i.putExtra("subCode", result.getSubCode());
+                            i.putExtra("subName", result.getSubName());
+                            i.putExtra("mon", result.getMon());
+                            i.putExtra("tue", result.getTue());
+                            i.putExtra("wed", result.getWed());
+                            i.putExtra("thr", result.getThr());
+                            i.putExtra("fri", result.getFri());
+                            i.putExtra("sat", result.getSat());
+
+                            Log.println(Log.DEBUG,"Sem:", Arrays.toString(result.getTtlSem()).toString());
+                            Log.println(Log.DEBUG,"SubCode:",Arrays.toString(result.getSubCode()).toString());
+                            Log.println(Log.DEBUG,"Subname:",Arrays.toString(result.getSubName()).toString());
+                            Log.println(Log.DEBUG,"Tue:",Arrays.toString(result.getMon()).toString());
+                            Log.println(Log.DEBUG,"wed:",Arrays.toString(result.getTue()).toString());
+                            Log.println(Log.DEBUG,"thr:",Arrays.toString(result.getWed()).toString());
+                            Log.println(Log.DEBUG,"fri:",Arrays.toString(result.getThr()).toString());
+                            Log.println(Log.DEBUG,"sat:",Arrays.toString(result.getFri()).toString());
+                            Log.println(Log.DEBUG,"Mon:",Arrays.toString(result.getSat()).toString());
+
                             startActivity(i);
 
                         }else if(response.code()==404){

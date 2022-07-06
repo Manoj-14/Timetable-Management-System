@@ -30,6 +30,15 @@ public class studentHome extends AppCompatActivity {
         bundle.putString("usn",usn);
         bundle.putString("branch",branch);
         bundle.putString("sem",sem);
+        bundle.putIntArray("ttlSem",getIntent().getIntArrayExtra("ttlSem"));
+        bundle.putStringArray("subCode",getIntent().getStringArrayExtra("subCode"));
+        bundle.putStringArray("subName",getIntent().getStringArrayExtra("subName"));
+        bundle.putStringArray("mon",getIntent().getStringArrayExtra("mon"));
+        bundle.putStringArray("tue",getIntent().getStringArrayExtra("tue"));
+        bundle.putStringArray("wed",getIntent().getStringArrayExtra("wed"));
+        bundle.putStringArray("thr",getIntent().getStringArrayExtra("thr"));
+        bundle.putStringArray("fri",getIntent().getStringArrayExtra("fri"));
+        bundle.putStringArray("sat",getIntent().getStringArrayExtra("sat"));
 
         replaceFragment(new HomeFragment(),bundle);
 

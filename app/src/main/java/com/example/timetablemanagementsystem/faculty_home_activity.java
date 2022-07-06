@@ -10,11 +10,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 import java.sql.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class faculty_home_activity extends AppCompatActivity {
@@ -39,9 +41,15 @@ public class faculty_home_activity extends AppCompatActivity {
         String fid = getIntent().getStringExtra("fid");
         String branch = getIntent().getStringExtra("branch");
         String[] sem = getIntent().getStringArrayExtra("sem");
+        int[] ttlSem = getIntent().getIntArrayExtra("ttlSem");
+        String[] subCode = getIntent().getStringArrayExtra("subCode");
+        String[] subName = getIntent().getStringArrayExtra("subCode");
+        ArrayList<String> data = getIntent().getStringArrayListExtra("data");
+
+//        Log.println(Log.DEBUG,"Data:", data.toString());
 
 
-
+        Toast.makeText(this, Arrays.toString(ttlSem), Toast.LENGTH_SHORT).show();
 
 //        greetFac.setText("Hii " +name);
 
@@ -50,6 +58,15 @@ public class faculty_home_activity extends AppCompatActivity {
         bundle.putString("fid",fid);
         bundle.putString("branch",branch);
         bundle.putStringArray("sem",sem);
+        bundle.putIntArray("ttlSem",getIntent().getIntArrayExtra("ttlSem"));
+        bundle.putStringArray("subCode",getIntent().getStringArrayExtra("subCode"));
+        bundle.putStringArray("subName",getIntent().getStringArrayExtra("subName"));
+        bundle.putStringArray("mon",getIntent().getStringArrayExtra("mon"));
+        bundle.putStringArray("tue",getIntent().getStringArrayExtra("tue"));
+        bundle.putStringArray("wed",getIntent().getStringArrayExtra("wed"));
+        bundle.putStringArray("thr",getIntent().getStringArrayExtra("thr"));
+        bundle.putStringArray("fri",getIntent().getStringArrayExtra("fri"));
+        bundle.putStringArray("sat",getIntent().getStringArrayExtra("sat"));
         replaceFragment(fac_add_class_fragment,bundle );
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {

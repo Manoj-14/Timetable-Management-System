@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -26,6 +27,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Fac_add_class_fragment extends Fragment {
 
+    public static ArrayList<ModClass> dataList;
     Spinner mon ,tue,wed,thu,fri,sat,semDisp;
     Button addcls;
     EditText subCodeEdt , subNameEdt;
@@ -44,9 +46,12 @@ public class Fac_add_class_fragment extends Fragment {
                              Bundle savedInstanceState) {
         Activity activityObj = this.getActivity();
 
+        dataList = new ArrayList<>();
+
         View myView = inflater.inflate(R.layout.fragment_fac_add_class_fragment, container, false);
         retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
         retrofitInterface = retrofit.create(RetrofitInterface.class);
+
 
         mon = (Spinner)myView.findViewById(R.id.mondayTime);
         tue = (Spinner)myView.findViewById(R.id.tuesdayTime);
@@ -107,6 +112,9 @@ public class Fac_add_class_fragment extends Fragment {
                     public void onResponse(Call<Void> call, Response<Void> response) {
                         if(response.code() == 200){
                             Toast.makeText(activityObj, "TimeTable added successfullly", Toast.LENGTH_SHORT).show();
+                        }
+                        else if(response.code() == 201){
+                            Toast.makeText(activityObj, "TimeTable updated successfullly", Toast.LENGTH_SHORT).show();
                         }
                         else if(response.code() == 400){
                             Toast.makeText(activityObj, "Timetable exists", Toast.LENGTH_SHORT).show();
