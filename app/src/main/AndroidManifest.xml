@@ -36,14 +36,14 @@
         <activity
             android:name=".homeScreen2"
             android:exported="false" />
-        <activity
-            android:name=".SignUpOrIn"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".SignUpOrIn"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".studentHome"
             android:exported="false" />
         <activity
-            android:name=".HomeScreen"
+            android:name=".SignUpOrIn"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -63,7 +63,6 @@ public class HomeFragment extends Fragment {
 
         for (int i=0;i< ttlSem.length ; i++){
             ModClass modDataList = new ModClass(ttlSem[i],subCode[i],subName[i], mon[i],tue[i],wed[i],thu[i],fri[i],sat[i] );
-//            ModClass modDataList = new ModClass(1,"code","name", "mon","tue[i]","wed[i]","thu[i]","fri[i]","sat[i]" );
             dataList.add(modDataList);
         }
 

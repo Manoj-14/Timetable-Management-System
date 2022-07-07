@@ -31,15 +31,15 @@ public class Recycle_ttl_view extends RecyclerView.Adapter<Recycle_ttl_view.MyVi
     @Override
     public void onBindViewHolder(@NonNull Recycle_ttl_view.MyViewHolder holder, int position) {
         ModClass modClass = dataList.get(position);
-        holder.semData.setText("Sem :"+modClass.getSem());
-        holder.subCodeData.setText("Sub code :"+modClass.getSubCode());
-        holder.subNameData.setText("Sub Name :"+modClass.getSubName());
-        holder.monData.setText("Monday :"+modClass.getMon());
-        holder.tueData.setText("Tuesday :"+modClass.getTue());
-        holder.wedData.setText("Wednesday :"+modClass.getWed());
-        holder.thuData.setText("Thursday :"+modClass.getThu());
-        holder.friData.setText("Friday :"+modClass.getFri());
-        holder.satData.setText("Saturday :"+modClass.getSat());
+        holder.semData.setText(modClass.getSem());
+        holder.subCodeData.setText(modClass.getSubCode());
+        holder.subNameData.setText(modClass.getSubName());
+        holder.monData.setText(modClass.getMon());
+        holder.tueData.setText(modClass.getTue());
+        holder.wedData.setText(modClass.getWed());
+        holder.thuData.setText(modClass.getThu());
+        holder.friData.setText(modClass.getFri());
+        holder.satData.setText(modClass.getSat());
 
     }
 

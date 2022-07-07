@@ -111,13 +111,16 @@ public class Fac_add_class_fragment extends Fragment {
                     @Override
                     public void onResponse(Call<Void> call, Response<Void> response) {
                         if(response.code() == 200){
-                            Toast.makeText(activityObj, "TimeTable added successfullly", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(activityObj, "TimeTable added successfully", Toast.LENGTH_SHORT).show();
                         }
                         else if(response.code() == 201){
-                            Toast.makeText(activityObj, "TimeTable updated successfullly", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(activityObj, "TimeTable updated successfully", Toast.LENGTH_SHORT).show();
                         }
                         else if(response.code() == 400){
                             Toast.makeText(activityObj, "Timetable exists", Toast.LENGTH_SHORT).show();
+                        }
+                        else if(response.code() == 403){
+                            Toast.makeText(activityObj, "Subject Time table already added by others", Toast.LENGTH_SHORT).show();
                         }
                         else{
                             Toast.makeText(activityObj, response.message(), Toast.LENGTH_SHORT).show();

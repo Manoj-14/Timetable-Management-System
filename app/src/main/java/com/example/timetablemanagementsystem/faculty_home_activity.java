@@ -67,6 +67,7 @@ public class faculty_home_activity extends AppCompatActivity {
         bundle.putStringArray("thr",getIntent().getStringArrayExtra("thr"));
         bundle.putStringArray("fri",getIntent().getStringArrayExtra("fri"));
         bundle.putStringArray("sat",getIntent().getStringArrayExtra("sat"));
+        bundle.putString("password",getIntent().getStringExtra("password"));
         replaceFragment(fac_add_class_fragment,bundle );
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {

@@ -49,9 +49,6 @@ public class studentHome extends AppCompatActivity {
                 case R.id.home:
                     replaceFragment(new HomeFragment(),bundle);
                     break;
-                case R.id.faculties:
-                    replaceFragment(new facultyFragment(),bundle);
-                    break ;
                 case R.id.profile:
                     replaceFragment(new ProfileFragment(),bundle);
                     break;

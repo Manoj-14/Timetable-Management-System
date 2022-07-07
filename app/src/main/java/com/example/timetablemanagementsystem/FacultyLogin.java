@@ -68,7 +68,7 @@ public class FacultyLogin extends AppCompatActivity {
                             i.putExtra("name",result.getName());
                             i.putExtra("fid",result.getFid());
                             i.putExtra("branch",result.getBranch());
-
+                            i.putExtra("password",facPassword.getText().toString());
                             i.putExtra("sem",result.getSem());
                             i.putExtra("data", result.getData());
                             i.putExtra("ttlSem", result.getTtlSem());
