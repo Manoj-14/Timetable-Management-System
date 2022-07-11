@@ -34,7 +34,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_bold"
                     android:text="@string/name"
-                    android:textColor="#F44336"
+                    android:textColor="#000000"
                     android:textSize="24sp" />
 
                 <TextView
@@ -57,7 +57,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_bold"
                     android:text="@string/email"
-                    android:textColor="#F44336"
+                    android:textColor="#000000"
                     android:textSize="24sp" />
 
                 <TextView
@@ -80,7 +80,7 @@
             android:padding="5dp"
             android:text="@string/UptPass"
             android:textAlignment="gravity"
-            android:textColor="#F44336"
+            android:textColor="#000000"
             android:textSize="20sp" />
 
         <TableLayout

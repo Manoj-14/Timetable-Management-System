@@ -5,9 +5,11 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,7 +32,10 @@ public class Fac_add_class_fragment extends Fragment {
     public static ArrayList<ModClass> dataList;
     Spinner mon ,tue,wed,thu,fri,sat,semDisp;
     Button addcls;
-    EditText subCodeEdt , subNameEdt;
+    Spinner  subNameEdt;
+    EditText subCodeEdt ;
+    String selectedSem;
+    ArrayAdapter<CharSequence> subList;
 
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
@@ -62,7 +67,8 @@ public class Fac_add_class_fragment extends Fragment {
         semDisp = (Spinner)myView.findViewById(R.id.semList);
 
         subCodeEdt = (EditText)myView.findViewById(R.id.subcodeEdt);
-        subNameEdt = (EditText)myView.findViewById(R.id.subnameEdt);
+        subNameEdt = (Spinner) myView.findViewById(R.id.subnameEdt);
+
 
 
 
@@ -74,6 +80,52 @@ public class Fac_add_class_fragment extends Fragment {
         ArrayAdapter<String> semAdapter = new ArrayAdapter<String>(activityObj,android.R.layout.simple_spinner_item,sem);
         semAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         semDisp.setAdapter(semAdapter);
+
+        semDisp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                selectedSem = semDisp.getSelectedItem().toString();
+
+                int parentId = parent.getId();
+                Log.println(Log.DEBUG,"Data:",selectedSem);
+                if(parentId == R.id.semList){
+                    switch(selectedSem){
+                        case "1" :
+                            subList = ArrayAdapter.createFromResource(parent.getContext(),R.array.SecondSemP, android.R.layout.simple_spinner_item);
+                            break;
+                        case "2" :
+                            subList = ArrayAdapter.createFromResource(parent.getContext(),R.array.SecondSemP, android.R.layout.simple_spinner_item);
+                            break;
+                        case "3" :
+                            subList = ArrayAdapter.createFromResource(parent.getContext(),R.array.ThirdSemP, android.R.layout.simple_spinner_item);
+                            break;
+                        case "4" :
+                            subList = ArrayAdapter.createFromResource(parent.getContext(),R.array.fourthSemP, android.R.layout.simple_spinner_item);
+                            break;
+                        case "5" :
+                            subList = ArrayAdapter.createFromResource(parent.getContext(),R.array.fifthSemP, android.R.layout.simple_spinner_item);
+                            break;
+                        case "6" :
+                            subList = ArrayAdapter.createFromResource(parent.getContext(),R.array.sixthSemP, android.R.layout.simple_spinner_item);
+                            break;
+                        case "7" :
+                            subList = ArrayAdapter.createFromResource(parent.getContext(),R.array.seventhSemP, android.R.layout.simple_spinner_item);
+                            break;
+                        case "8" :
+                            subList = ArrayAdapter.createFromResource(parent.getContext(),R.array.eightSemP, android.R.layout.simple_spinner_item);
+                            break;
+                        default: break;
+                    }
+                    subList.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    subNameEdt.setAdapter(subList);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(activityObj,
                 R.array.timings, android.R.layout.simple_spinner_item);
@@ -95,7 +147,7 @@ public class Fac_add_class_fragment extends Fragment {
                 map.put("fid",fid);
                 map.put("branch",branch);
                 map.put("subcode",subCodeEdt.getText().toString());
-                map.put("subname",subNameEdt.getText().toString());
+                map.put("subname",subNameEdt.getSelectedItem().toString());
                 map.put("sem",semDisp.getSelectedItem().toString());
                 map.put("mon",mon.getSelectedItem().toString());
                 map.put("tue",tue.getSelectedItem().toString());

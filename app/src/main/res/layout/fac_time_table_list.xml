@@ -12,7 +12,8 @@
         android:layout_margin="5dp"
         android:gravity="center"
         android:text="Subject"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textStyle="italic" />
 
     <TableRow
         android:layout_width="match_parent"
@@ -26,8 +27,9 @@
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:text="Semester :"
-            android:textColor="#F44336"
-            android:textSize="20sp" />
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="italic" />
 
         <TextView
             android:id="@+id/listSem"
@@ -52,8 +54,9 @@
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:text="Sub Code :"
-            android:textColor="#F44336"
-            android:textSize="20sp" />
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="italic" />
 
         <TextView
             android:id="@+id/listSubC"
@@ -79,8 +82,9 @@
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:text="SubName :"
-            android:textColor="#F44336"
-            android:textSize="20sp" />
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="italic" />
 
         <TextView
             android:id="@+id/listSubN"
@@ -101,7 +105,8 @@
         android:layout_margin="5dp"
         android:gravity="center"
         android:text="Timings"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:textStyle="italic" />
 
     <TableRow
         android:layout_width="match_parent"
@@ -115,8 +120,9 @@
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:text="Monday :"
-            android:textColor="#F44336"
-            android:textSize="20sp" />
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="italic" />
 
         <TextView
             android:id="@+id/listMon"
@@ -141,8 +147,9 @@
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:text="Tuesday :"
-            android:textColor="#F44336"
-            android:textSize="20sp" />
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="italic" />
 
         <TextView
             android:id="@+id/listTue"
@@ -167,8 +174,9 @@
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:text="Wednesday :"
-            android:textColor="#F44336"
-            android:textSize="20sp" />
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="italic" />
 
         <TextView
             android:id="@+id/listWed"
@@ -193,8 +201,9 @@
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:text="Thursday :"
-            android:textColor="#F44336"
-            android:textSize="20sp" />
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="italic" />
 
         <TextView
             android:id="@+id/listThu"
@@ -220,8 +229,9 @@
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:text="Friday :"
-            android:textColor="#F44336"
-            android:textSize="20sp" />
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="italic" />
 
         <TextView
             android:id="@+id/listFri"
@@ -246,8 +256,9 @@
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:text="Saturday :"
-            android:textColor="#F44336"
-            android:textSize="20sp" />
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="italic" />
 
         <TextView
             android:id="@+id/listSat"

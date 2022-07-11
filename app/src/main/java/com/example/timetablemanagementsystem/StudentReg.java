@@ -75,7 +75,10 @@ public class StudentReg extends Fragment {
                     public void onResponse(Call<Void> call, Response<Void> response) {
                         if(response.code() == 200){
                             Toast.makeText(activityObj, "Registration Successfull", Toast.LENGTH_SHORT).show();
+
+                            resetfields();
                         }
+
                         else if(response.code() == 400){
                             Toast.makeText(activityObj, "Already registered", Toast.LENGTH_SHORT).show();
                         }
@@ -90,6 +93,13 @@ public class StudentReg extends Fragment {
         });
         
         return myView;
+    }
+
+    private void resetfields() {
+        stuNameEd.setText("");
+        stuUsnEd.setText("");
+        stuBraEdt.setText("");
+        stuSemEdt.setText("");
     }
 
 

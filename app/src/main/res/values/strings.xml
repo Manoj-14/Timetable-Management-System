@@ -5,7 +5,7 @@
     <string name="home1_ttl">See Your Schedules</string>
     <string name="home2_ttl">Get Your Faculty Details</string>
     <string name="home3_ttl">Get Your Syllabus</string>
-    <string name="logorsign_ttl">Hey Come in..!</string>
+    <string name="logorsign_ttl">Timetable Management system</string>
     <string name="signUp">Sign In as Student</string>
     <string name="signIn">Sign In as Faculty</string>
     <string name="signInAdmin">Sign In as Admin</string>
@@ -24,12 +24,111 @@
 
 
     <string-array name="timings">
-        <item>08:30 am</item>
-        <item>09:30 am</item>
-        <item>11:00 am</item>
-        <item>12:00 pm</item>
-        <item>02:00 pm</item>
-        <item>03:00 pm</item>
+        <item>08:30 am - 09:30 am</item>
+        <item>09:30 am - 10:30 am</item>
+        <item>11:00 am - 12:00pm</item>
+        <item>12:00 pm - 01-00pm</item>
+        <item>02:00 pm - 03:00pm</item>
+        <item>03:00 pm - 04:00pm</item>
+        <item>04:00 pm - 04:00pm</item>
+        <item>02:00 pm - 05:00pm (lab)</item>
         <item>No class</item>
+    </string-array>
+
+
+    <string-array name="empArr">
+        <item>Empty Array</item>
+    </string-array>
+    <string-array name="firstSemP">
+        <item>18MAT11</item>
+        <item>18PHY12</item>
+        <item>18ELE13</item>
+        <item>18CIV14</item>
+        <item>18EGDL15</item>
+        <item>18PHYL16</item>
+        <item>18ELEL17</item>
+        <item>18EGH18</item>
+    </string-array>
+
+
+
+    <string-array name="SecondSemP">
+        <item>18MAT21</item>
+        <item>18CHE22y</item>
+        <item>18CPS23</item>
+        <item>18ELN244 </item>
+        <item>18ME25</item>
+        <item>18CHEL16</item>
+        <item>18CPL27</item>
+        <item>18EGH18</item>
+    </string-array>
+
+    <string-array name="ThirdSemP">
+        <item>18MAT31</item>
+        <item>18CS32</item>
+        <item>18CS33</item>
+        <item>18CS34</item>
+        <item>18CS35</item>
+        <item>18CS36</item>
+        <item>18CSL38</item>
+    </string-array>
+
+    <string-array name="fourthSemP">
+        <item>18MAT41</item>
+        <item>18CS42</item>
+        <item>18CS43</item>
+        <item>18SC44</item>
+        <item>18CS45</item>
+        <item>18CS46</item>
+        <item>18CSL47</item>
+        <item>18CSL48</item>
+        <item>18KVK49</item>
+    </string-array>
+
+
+    <string-array name="fifthSemP">
+        <item>18CS51 </item>
+        <item>18CS52</item>
+        <item>18CS53</item>
+        <item>18CS54</item>
+        <item>18CS55</item>
+        <item>18CS56</item>
+        <item>18CSL57</item>
+        <item>18CSL58</item>
+        <item>18CIV59</item>
+    </string-array>
+
+
+    <string-array name="sixthSemP">
+        <item>18IS61 </item>
+        <item>18IS62</item>
+        <item>18CS63</item>
+        <item>18CS64X</item>
+        <item>18CS65X</item>
+        <item>18ISL6</item>
+        <item>18ISL67</item>
+        <item>118CSMP68</item>
+
+    </string-array>
+
+    <string-array name="seventhSemP">
+        <item>18CS71</item>
+        <item>18CS72</item>
+        <item>18CS73X</item>
+        <item>18CS74X</item>
+        <item>18CS75X</item>
+        <item>18CSL76 </item>
+        <item>18CSP77</item>
+
+
+    </string-array>
+
+
+    <string-array name="eightSemP">
+        <item>18CS81</item>
+        <item>18CS82X</item>
+        <item>18CSP83</item>
+        <item>18CS74X</item>
+        <item>18CSS84</item>
     </string-array>
 </resources>

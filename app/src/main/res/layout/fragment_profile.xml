@@ -21,7 +21,7 @@
             android:gravity="center"
             android:padding="10dp"
             android:text="Your Profile"
-            android:textColor="#F44336"
+            android:textColor="#000000"
             android:textSize="30sp" />
 
         <TableLayout
@@ -41,7 +41,7 @@
                     android:layout_margin="10dp"
                     android:layout_weight="1"
                     android:text="@string/name"
-                    android:textColor="#F44336"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <TextView
@@ -65,7 +65,7 @@
                     android:layout_margin="10dp"
                     android:layout_weight="1"
                     android:text="USN :"
-                    android:textColor="#F44336"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <TextView
@@ -89,7 +89,7 @@
                     android:layout_margin="10dp"
                     android:layout_weight="1"
                     android:text="@string/branch"
-                    android:textColor="#F44336"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <TextView
@@ -113,7 +113,7 @@
                     android:layout_margin="10dp"
                     android:layout_weight="1"
                     android:text="Semester"
-                    android:textColor="#F44336"
+                    android:textColor="#000000"
                     android:textSize="20sp" />
 
                 <TextView
@@ -135,7 +135,7 @@
             android:fontFamily="@font/roboto_bold"
             android:gravity="center"
             android:text="Update Password"
-            android:textColor="#F44336"
+            android:textColor="#000000"
             android:textSize="30sp" />
 
         <TableLayout
@@ -153,7 +153,7 @@
                     android:layout_margin="10dp"
                     android:layout_weight="1"
                     android:text="@string/old_pass"
-                    android:textColor="#F44336"
+                    android:textColor="#000000"
                     android:textSize="16sp" />
 
                 <EditText
@@ -176,11 +176,11 @@
                     android:id="@+id/textView29"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
                     android:layout_weight="1"
                     android:text="@string/new_pass"
-                    android:textColor="#F44336"
-                    android:textSize="16sp"
-                    android:layout_margin="10dp" />
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
 
                 <EditText
                     android:id="@+id/stuNewPass"

@@ -95,9 +95,11 @@ public class FacultyRegister extends Fragment {
                     public void onResponse(Call<Void> call, Response<Void> response) {
                         if(response.code() == 200){
                             Toast.makeText(activityObj, "Registration Successfull", Toast.LENGTH_SHORT).show();
+                            resetfields();
                         }
                         else if(response.code() == 400){
                             Toast.makeText(activityObj, "Already registered", Toast.LENGTH_SHORT).show();
+                            resetfields();
                         }
                     }
 
@@ -114,6 +116,23 @@ public class FacultyRegister extends Fragment {
 
         // Inflate the layout for this fragment
         return myview;
+    }
+    private void resetfields() {
+        facName.setText("");
+        facId.setText("");
+        facBranch.setText("");
+        sem1.setChecked(false);
+        sem2.setChecked(false);
+        sem3.setChecked(false);
+        sem4.setChecked(false);
+        sem5.setChecked(false);
+        sem6.setChecked(false);
+        sem7.setChecked(false);
+        sem8.setChecked(false);
+
+
+
+
     }
 
 }
