@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/adminStuFrame"
+        android:title="Student Register"
+        android:icon="@drawable/ic_student_svgrepo_com"/>
+    <item android:id="@+id/adminFacframe"
+        android:title="Faculty Register"
+        android:icon="@drawable/ic_teacher_svgrepo_com"/>
+    <item android:id="@+id/adminProfframe"
+        android:title="Profile"
+        android:icon="@drawable/ic_baseline_person_24"/>
+</menu>
