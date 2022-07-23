@@ -62,7 +62,6 @@ public class FacultyLogin extends AppCompatActivity {
 
                             System.out.println(result);
 //                            Log.println(Log.DEBUG,"Body",result.getFid());
-                            Toast.makeText(FacultyLogin.this, result.getSem()[1], Toast.LENGTH_SHORT).show();
                             Intent i = new Intent(FacultyLogin.this , faculty_home_activity.class);
 
                             i.putExtra("name",result.getName());
