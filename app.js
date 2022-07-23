@@ -6,7 +6,7 @@ const mongoClient = require("mongodb").MongoClient;
 const mongoose = require("mongoose");
 const app = express();
 const url =
-  "mongodb+srv://admin:admin123@sandbox.tnuga.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://admin:admin123@sandbox.ubahq.mongodb.net/?retryWrites=true&w=majority";
 const port = process.env.PORT || 9001;
 app.set("port", port);
 app.use(express.json());
