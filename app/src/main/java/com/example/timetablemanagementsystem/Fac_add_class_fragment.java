@@ -136,14 +136,11 @@ public class Fac_add_class_fragment extends Fragment {
         thu.setAdapter(adapter);
         fri.setAdapter(adapter);
         sat.setAdapter(adapter);
-
         addcls = (Button)myView.findViewById(R.id.addcls);
-
         addcls.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 HashMap<String,String> map = new HashMap<>();
-
                 map.put("fid",fid);
                 map.put("branch",branch);
                 map.put("subcode",subCodeEdt.getText().toString());
@@ -155,10 +152,7 @@ public class Fac_add_class_fragment extends Fragment {
                 map.put("thu",thu.getSelectedItem().toString());
                 map.put("fri",fri.getSelectedItem().toString());
                 map.put("sat",sat.getSelectedItem().toString());
-
-
                 Call<Void> call = retrofitInterface.exefacAddCls(map);
-
                 call.enqueue(new Callback<Void>() {
                     @Override
                     public void onResponse(Call<Void> call, Response<Void> response) {
@@ -177,16 +171,12 @@ public class Fac_add_class_fragment extends Fragment {
                         else{
                             Toast.makeText(activityObj, response.message(), Toast.LENGTH_SHORT).show();
                         }
-
                     }
-
                     @Override
                     public void onFailure(Call<Void> call, Throwable t) {
                         Toast.makeText(activityObj, t.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
-
-//                Toast.makeText(activityObj, semDisp.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -45,7 +45,6 @@ public class FacultyRegister extends Fragment {
         facBranch = (EditText) myview.findViewById(R.id.facbranchEdt);
         facName = (EditText) myview.findViewById(R.id.facNameReg);
         facId = (EditText) myview.findViewById(R.id.facIdReg);
-
         sem1 = (CheckBox) myview.findViewById(R.id.Check1);
         sem2 = (CheckBox) myview.findViewById(R.id.Check2);
         sem3 = (CheckBox) myview.findViewById(R.id.Check3);
@@ -54,7 +53,6 @@ public class FacultyRegister extends Fragment {
         sem6 = (CheckBox) myview.findViewById(R.id.Check6);
         sem7 = (CheckBox) myview.findViewById(R.id.Check7);
         sem8 = (CheckBox) myview.findViewById(R.id.Check8);
-
         facRegbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,9 +85,7 @@ public class FacultyRegister extends Fragment {
                 if(sem8.isChecked()){
                     map.put("sem8",sem8.getText().toString());
                 }
-
                 Call<Void> call = retrofitInterface.exeFacReg(map);
-
                 call.enqueue(new Callback<Void>() {
                     @Override
                     public void onResponse(Call<Void> call, Response<Void> response) {
@@ -102,7 +98,6 @@ public class FacultyRegister extends Fragment {
                             resetfields();
                         }
                     }
-
                     @Override
                     public void onFailure(Call<Void> call, Throwable t) {
                         Toast.makeText(activityObj, t.getMessage(), Toast.LENGTH_SHORT).show();

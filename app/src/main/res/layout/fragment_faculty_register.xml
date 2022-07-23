@@ -102,6 +102,7 @@
                 android:layout_height="wrap_content"
                 android:text="8" />
         </TableRow>
+
         <EditText
             android:id="@+id/facbranchEdt"
             android:layout_width="match_parent"
@@ -110,7 +111,8 @@
             android:ems="10"
             android:hint="Branch"
             android:inputType="textPersonName"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:text="ISE" />
 
 
         <Button

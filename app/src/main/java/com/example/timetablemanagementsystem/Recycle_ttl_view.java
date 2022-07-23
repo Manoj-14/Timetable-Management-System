@@ -15,19 +15,16 @@ public class Recycle_ttl_view extends RecyclerView.Adapter<Recycle_ttl_view.MyVi
 
     Context context;
     ArrayList<ModClass> dataList;
-
     public Recycle_ttl_view(Context context, ArrayList<ModClass> dataList) {
         this.context = context;
         this.dataList = dataList;
     }
-
     @NonNull
     @Override
     public Recycle_ttl_view.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(context).inflate(R.layout.fac_time_table_list,parent,false);
         return new MyViewHolder(v);
     }
-
     @Override
     public void onBindViewHolder(@NonNull Recycle_ttl_view.MyViewHolder holder, int position) {
         ModClass modClass = dataList.get(position);
@@ -40,21 +37,15 @@ public class Recycle_ttl_view extends RecyclerView.Adapter<Recycle_ttl_view.MyVi
         holder.thuData.setText(modClass.getThu());
         holder.friData.setText(modClass.getFri());
         holder.satData.setText(modClass.getSat());
-
     }
-
     @Override
     public int getItemCount() {
         return dataList.size();
     }
-
     public static class MyViewHolder extends RecyclerView.ViewHolder{
-
         TextView semData , subCodeData , subNameData , monData , tueData , wedData, thuData, friData , satData;
-
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-
             semData = itemView.findViewById(R.id.listSem);
             subCodeData = itemView.findViewById(R.id.listSubC);
             subNameData = itemView.findViewById(R.id.listSubN);
