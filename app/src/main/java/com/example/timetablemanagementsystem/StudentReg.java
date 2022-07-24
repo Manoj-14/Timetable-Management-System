@@ -25,7 +25,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class StudentReg extends Fragment {
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
-    private String BASE_URL = "http://10.0.2.2:9001";
+    private String BASE_URL = global.BASE_URL;
 
     Button regStudent;
     EditText stuNameEd,stuUsnEd , stuPassEd,stuSemEdt,stuBraEdt ;
@@ -35,8 +35,6 @@ public class StudentReg extends Fragment {
         // Required empty public constructor
 
     }
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

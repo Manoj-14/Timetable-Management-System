@@ -25,7 +25,7 @@ public class ProfileFragment extends Fragment {
 
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
-    private String BASE_URL = "http://10.0.2.2:9001";
+    private String BASE_URL = global.BASE_URL;
 
     TextView stuName,stuUsn,stuBran,stuSem;
     Button stuPasUpt;

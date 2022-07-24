@@ -41,6 +41,7 @@ public class studentHome extends AppCompatActivity {
         bundle.putStringArray("thr",getIntent().getStringArrayExtra("thr"));
         bundle.putStringArray("fri",getIntent().getStringArrayExtra("fri"));
         bundle.putStringArray("sat",getIntent().getStringArrayExtra("sat"));
+        bundle.putString("password",getIntent().getStringExtra("password"));
 
         replaceFragment(new HomeFragment(),bundle);
 

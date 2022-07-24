@@ -25,7 +25,7 @@ public class FacultyLogin extends AppCompatActivity {
 
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
-    private String BASE_URL = "http://10.0.2.2:9001";
+    private String BASE_URL = global.BASE_URL;
 
     Button facLoginBtn;
     EditText facId,facPassword;
@@ -80,7 +80,7 @@ public class FacultyLogin extends AppCompatActivity {
                             i.putExtra("fri", result.getFri());
                             i.putExtra("sat", result.getSat());
 //                            i.putExtra("ttl")
-                            Toast.makeText(FacultyLogin.this, Arrays.toString(result.getTtlSem()), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(FacultyLogin.this, "Login Successful", Toast.LENGTH_SHORT).show();
 //                            Log.println(Log.DEBUG,"Data:",result.getData().toString());
                             Log.println(Log.DEBUG,"Sem:",Arrays.toString(result.getTtlSem()).toString());
                             Log.println(Log.DEBUG,"SubCode:",Arrays.toString(result.getSubCode()).toString());

@@ -25,7 +25,7 @@ public class FacultyRegister extends Fragment {
 
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
-    private String BASE_URL = "http://10.0.2.2:9001";
+    private String BASE_URL = global.BASE_URL;
     Button facRegbtn;
     EditText facName , facBranch , facId;
     CheckBox sem1,sem2,sem3,sem4,sem5,sem6,sem7,sem8;
