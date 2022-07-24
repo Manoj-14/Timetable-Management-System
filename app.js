@@ -148,6 +148,10 @@ const adminData = new admin({
 
 // adminData.save();
 
+app.get("/", (req, res) => {
+  res.send("Server is running");
+});
+
 app.post("/login", (req, res) => {
   const query = { USN: req.body.usn.toUpperCase() };
   Student.findOne(query, (err, result) => {
