@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,7 +29,7 @@ public class facViewTtlFragment extends Fragment {
 
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
-    private String BASE_URL = "http://10.0.2.2:9001";
+    private String BASE_URL = global.BASE_URL;
 
     RecyclerView recyclerView;
     Recycle_ttl_view recycle_ttl_view;
@@ -66,23 +67,57 @@ public class facViewTtlFragment extends Fragment {
         recyclerView.setAdapter(recycle_ttl_view);
 
 
-
-        sem = getArguments().getStringArray("sem");
         String fid = getArguments().getString("fid");
-        String branch = getArguments().getString("branch");
-        ArrayList data = getArguments().getStringArrayList("data");
+        HashMap<String,String> myMap = new HashMap<>();
 
-        ttlSem = getArguments().getIntArray("ttlSem");
-        subCode = getArguments().getStringArray("subCode");
-        subName = getArguments().getStringArray("subName");
-        mon = getArguments().getStringArray("mon");
-        tue = getArguments().getStringArray("tue");
-        wed = getArguments().getStringArray("wed");
-        thu = getArguments().getStringArray("thr");
-        fri = getArguments().getStringArray("fri");
-        sat = getArguments().getStringArray("sat");
 
-        getData();
+        myMap.put("fid",fid);
+        myMap.put("password",getArguments().getString("password"));
+
+        Call<FacLogin> myCall = retrofitInterface.exeFaclogin(myMap);
+
+        myCall.enqueue(new Callback<FacLogin>() {
+            @Override
+            public void onResponse(Call<FacLogin> call, Response<FacLogin> response) {
+                FacLogin myResult = response.body();
+
+                ttlSem = myResult.getTtlSem();
+                subCode = myResult.getSubCode();
+                subName = myResult.getSubName();
+                mon = myResult.getMon();
+                tue = myResult.getTue();
+                wed = myResult.getWed();
+                thu = myResult.getThr();
+                fri = myResult.getFri();
+                sat = myResult.getSat();
+
+                getData();
+            }
+
+            @Override
+            public void onFailure(Call<FacLogin> call, Throwable t) {
+                Toast.makeText(activityObj, "Can't able to refresh", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+//
+//        sem = getArguments().getStringArray("sem");
+//
+//        String branch = getArguments().getString("branch");
+//        ArrayList data = getArguments().getStringArrayList("data");
+//
+//        ttlSem = getArguments().getIntArray("ttlSem");
+//        subCode = getArguments().getStringArray("subCode");
+//        subName = getArguments().getStringArray("subName");
+//        mon = getArguments().getStringArray("mon");
+//        tue = getArguments().getStringArray("tue");
+//        wed = getArguments().getStringArray("wed");
+//        thu = getArguments().getStringArray("thr");
+//        fri = getArguments().getStringArray("fri");
+//        sat = getArguments().getStringArray("sat");
+//
+//        getData();
 
         refreshBtn = (Button) myView.findViewById(R.id.refreshFac);
 
@@ -130,7 +165,7 @@ public class facViewTtlFragment extends Fragment {
 
                     @Override
                     public void onFailure(Call<FacLogin> call, Throwable t) {
-
+                        Toast.makeText(activityObj, "Can't able to refresh", Toast.LENGTH_SHORT).show();
                     }
                 });
             }

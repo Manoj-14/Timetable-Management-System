@@ -23,7 +23,7 @@ public class StudentLogin extends AppCompatActivity {
 
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
-    private String BASE_URL = "http://10.0.2.2:9001";
+    private String BASE_URL = global.BASE_URL;
     Button login;
     EditText usnEdit,passwordEdit;
     @Override
@@ -52,7 +52,7 @@ public class StudentLogin extends AppCompatActivity {
 
                             LoginRes result = response.body();
 
-                            Toast.makeText(StudentLogin.this,result.getSem(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(StudentLogin.this,"Login Successful", Toast.LENGTH_SHORT).show();
 
                             Intent i = new Intent(StudentLogin.this,studentHome.class);
                             i.putExtra("name",result.getName());
@@ -69,6 +69,7 @@ public class StudentLogin extends AppCompatActivity {
                             i.putExtra("thr", result.getThr());
                             i.putExtra("fri", result.getFri());
                             i.putExtra("sat", result.getSat());
+                            i.putExtra("password",passwordEdit.getText().toString());
 
                             Log.println(Log.DEBUG,"Sem:", Arrays.toString(result.getTtlSem()).toString());
                             Log.println(Log.DEBUG,"SubCode:",Arrays.toString(result.getSubCode()).toString());
