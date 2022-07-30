@@ -14,3 +14,8 @@ node_modules
 .externalNativeBuild
 .cxx
 local.properties
+.build.gradle
+.gradlew
+.gradle.properties
+.gradlew.bat
+.app
